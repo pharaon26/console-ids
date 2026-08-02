@@ -1,0 +1,25 @@
+[
+  {
+    "id": "land_attack",
+    "name": "Land Attack (IP Spoofing)",
+    "severity": "Critical",
+    "protocol": "IP",
+    "condition": "ip_self_reference"
+  },
+  {
+    "id": "null_scan",
+    "name": "Null Scan (TCP флаги отсутствуют)",
+    "severity": "Аномалия",
+    "protocol": "TCP",
+    "condition": "tcp_flags_equal",
+    "value": 0
+  },
+  {
+    "id": "xmas_scan",
+    "name": "Xmas Scan (Флаги FIN, PSH, URG)",
+    "severity": "Аномалия",
+    "protocol": "TCP",
+    "condition": "tcp_flags_equal",
+    "value": "FPU"
+  }
+]
